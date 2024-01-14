@@ -126,15 +126,12 @@ class BatchRemoteDataSource {
 
 Future<Either<Failure,bool>>deleteBatch(String batchId)async{
   try{
-    String? token;
-    var data= await userSharedPrefs.getUserToken();
-    data.fold((l) => (l)=>token=null,
-    (r)=>token=r!,);
+    
      Response response = await dio.delete(
         ApiEndpoints.deleteBatch + batchId,
         options: Options(
           headers: {
-            'Authorization': 'Bearer $token',
+            'Authorization': 'Bearer ${ApiEndpoints.token}',
           },
         ),
       );

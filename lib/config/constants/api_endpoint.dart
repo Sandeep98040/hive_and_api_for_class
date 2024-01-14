@@ -1,11 +1,11 @@
 class ApiEndpoints {
   ApiEndpoints._();
 
-  static const token = "";
+  static const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWNkM2E4NTE5NTYyNmMwNTRjZmM2OCIsImlhdCI6MTcwNTIxMTg1MSwiZXhwIjoxNzA3ODAzODUxfQ.xRnHG_BhTYNLPdv84fE3jy66p9khhNRh5IQCUWT70Fg";
   static const Duration connectionTimeout = Duration(seconds: 1000);
   static const Duration receiveTimeout = Duration(seconds: 1000);
   // static const String baseUrl = "http://10.0.2.2:3000/api/v1/";
-  static const String baseUrl = "http://172.25.0.89:3000/api/v1/";
+  static const String baseUrl = "http://172.26.0.111:3000/api/v1/";
 
   // ====================== Auth Routes ======================
   static const String login = "auth/login";
@@ -21,7 +21,7 @@ class ApiEndpoints {
   // ====================== Batch Routes ======================
   static const String createBatch = "batch/createBatch";
   static const String getAllBatch = "batch/getAllBatches";
-  static const String deleteBatch = "/batch/deleteBatch";
+  static const String deleteBatch = "batch/";
 
   // ====================== Course Routes ======================
   static const String createCourse = "course/createCourse";

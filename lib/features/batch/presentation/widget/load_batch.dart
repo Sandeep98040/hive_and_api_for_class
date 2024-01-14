@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_and_api_for_class/features/batch/domain/entity/batch_entity.dart';
+import 'package:hive_and_api_for_class/features/batch/presentation/viewmodel/batch_view_model.dart';
 
 class LoadBatch extends StatelessWidget {
   final WidgetRef ref;
@@ -30,9 +31,9 @@ class LoadBatch extends StatelessWidget {
                     TextButton(
                         onPressed: () {
                           Navigator.pop(context);
-                          // ref
-                          //     .read(batchViewModelProvider.notifier)
-                          //     .deletebatch(context, lstBatches[index]);
+                          ref
+                              .read(batchViewModelProvider.notifier)
+                              .deleteBatch(context, lstBatches[index]);
                         },
                         child: const Text('Yes')),
                   ],
